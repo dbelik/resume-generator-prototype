@@ -8,12 +8,10 @@
 // {...}
 
 /**
- * Browse - Browse page that can be used to search different
- * resume templates. It lists popular templates as well as
- * recently used.
+ * UserResumes -
  *
  * @returns JSX.Element
  */
-export default function Browse() {
+export default function UserResumes() {
     return <span />;
 }
