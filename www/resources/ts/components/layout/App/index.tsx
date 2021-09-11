@@ -10,7 +10,7 @@ import darkTheme from '@theme/dark';
 import store from '@store/index';
 
 /**
- * Create App component that will create project's theme, redux
+ * App - Create App component that will create project's theme, redux
  * and other providers.
  *
  * @returns {JSX.Element}

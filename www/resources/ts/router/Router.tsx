@@ -10,7 +10,7 @@ import TopBar from '@components/Layout/TopBar';
 import routes from '@constants/routes';
 
 /**
- * Router component that defines all routes available inside
+ * Router - Router component that defines all routes available inside
  * the application. It defines a set of public, private and
  * error routes. All routes defines in this component can be
  * accessed by user.

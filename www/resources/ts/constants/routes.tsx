@@ -9,7 +9,7 @@ import { HomeMajor, SearchMajor } from '@shopify/polaris-icons';
 // {...}
 
 /**
- * Define a route in the application. It's being used
+ * IRoute - Define a route in the application. It's being used
  * in Router component to define available routes as well
  * as in navigational bar.
  */
@@ -20,7 +20,7 @@ interface IRoute {
 }
 
 /**
- * Variable that holds all routes in the application.
+ * routes - Variable that holds all routes in the application.
  */
 const routes = {
     home: { url: '/', label: 'Home', icon: HomeMajor } as IRoute,
@@ -28,7 +28,7 @@ const routes = {
 };
 
 /**
- * Variable that holds all routes that are supposed to be used
+ * mainRoutes - Variable that holds all routes that are supposed to be used
  * in main section of navigational bar.
  */
 export const mainRoutes = [routes.home, routes.browse];

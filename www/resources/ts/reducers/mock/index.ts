@@ -19,7 +19,7 @@ const mockReducerInitialState: IMockReducerState = {
 };
 
 /**
- * Reducer that handles events that deal with mocking (just example reducer).
+ * mockReducer - Reducer that handles events that deal with mocking (just example reducer).
  *
  * @param {IMockReducerState} state
  * @param {MockAction} action

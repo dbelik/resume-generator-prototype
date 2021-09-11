@@ -8,7 +8,8 @@
         "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production",
-        "generate-jsdoc": "jsdoc -c jsdoc.conf.json"
+        "jsdoc": "jsdoc -c jsdoc.conf.json",
+        "gr-cli": "npx generate-react-cli"
     },
     "dependencies": {
         "@shopify/polaris": "^6.6.0",

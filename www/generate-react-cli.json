@@ -19,7 +19,10 @@
             "withLazy": false,
             "withStory": false,
             "withStyle": false,
-            "withTest": false
+            "withTest": false,
+            "customTemplates": {
+                "component": "resources/ts/templates/default/index.tsx"
+            }
         }
     }
 }

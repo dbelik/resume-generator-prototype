@@ -8,7 +8,7 @@ import { Navigation as PolarisNavigation } from '@shopify/polaris';
 import { mainRoutes } from '@constants/routes';
 
 /**
- * Defines navigational component for mobile devices.
+ * Navigation - Defines navigational component for mobile devices.
  *
  * @returns JSX.Element
  */

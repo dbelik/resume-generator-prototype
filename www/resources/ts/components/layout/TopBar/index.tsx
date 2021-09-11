@@ -10,7 +10,7 @@ import Navigation from '@components/Layout/Navigation';
 // {...}
 
 /**
- * Lays down navigational bar for the application. It
+ * TopBar - Lays down navigational bar for the application. It
  * uses polaris' TopBar component.
  *
  * @returns JSX.Element

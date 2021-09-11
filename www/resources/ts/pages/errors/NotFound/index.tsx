@@ -8,7 +8,7 @@
 // {...}
 
 /**
- * Not found page component. Every time user requests non-existing
+ * NotFound - Not found page component. Every time user requests non-existing
  * page, this component will be served to indicated that the route
  * doesn't exist.
  *

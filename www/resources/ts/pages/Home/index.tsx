@@ -8,7 +8,7 @@
 // {...}
 
 /**
- * Home page component.
+ * Home - Home page component.
  *
  * @returns JSX.Element
  */

@@ -37,7 +37,7 @@ deploy: up ## Start all containers and generate production app version.
 watch: ## Start watcher.
 	$(DOCKER_COMPOSE) run --rm --user=${user}:${group} $(NODE_CONTAINER) npm run watch
 docs: ## Generate docs.
-	$(DOCKER_COMPOSE) run --rm --user=${user}:${group} $(NODE_CONTAINER) npm run generate-jsdoc
+	$(DOCKER_COMPOSE) run --rm --user=${user}:${group} $(NODE_CONTAINER) npm run jsdoc
 
 ---------------: ## ------[ Run commands ]---------
 run: ## Run container.
