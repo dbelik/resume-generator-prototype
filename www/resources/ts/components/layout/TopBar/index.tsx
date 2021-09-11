@@ -3,8 +3,8 @@ import { useCallback, useState } from 'react';
 import { Frame, TopBar as PolarisTopBar } from '@shopify/polaris';
 
 // @NOTE: Import custom functions.
-import TopBarUser from '@components/layout/TopBar/TopBarUser';
-import Navigation from '@components/layout/TopBar/Navigation';
+import TopBarUser from '@components/Layout/TopBarUser';
+import Navigation from '@components/Layout/Navigation';
 
 // @NOTE: Import misc.
 // {...}

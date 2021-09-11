@@ -1,0 +1,25 @@
+{
+    "usesTypeScript": true,
+    "usesCssModule": false,
+    "cssPreprocessor": "scss",
+    "testLibrary": "None",
+    "component": {
+        "default": {
+            "path": "resources/ts/components",
+            "withStyle": false,
+            "withTest": false,
+            "withStory": false,
+            "withLazy": false,
+            "customTemplates": {
+                "component": "resources/ts/templates/default/index.tsx"
+            }
+        },
+        "page": {
+            "path": "resources/ts/pages",
+            "withLazy": false,
+            "withStory": false,
+            "withStyle": false,
+            "withTest": false
+        }
+    }
+}

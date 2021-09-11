@@ -2,7 +2,7 @@
 import ReactDOM from 'react-dom';
 
 // @NOTE: Import custom components.
-import App from '@components/layout/App';
+import App from '@components/Layout/App';
 
 // @NOTE: Import misc.
 import '@shopify/polaris/dist/styles.css';

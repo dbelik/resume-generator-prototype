@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // @NOTE: Import custom functions.
 import Home from '@pages/Home';
 import NotFound from '@pages/errors/NotFound';
-import TopBar from '@components/layout/TopBar';
+import TopBar from '@components/Layout/TopBar';
 
 // @NOTE: Import misc.
 import routes from '@constants/routes';

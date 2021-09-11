@@ -1,6 +1,6 @@
 // @NOTE: Import library functions.
 import { IconSource } from '@shopify/polaris';
-import { HomeMajor } from '@shopify/polaris-icons';
+import { HomeMajor, SearchMajor } from '@shopify/polaris-icons';
 
 // @NOTE: Import custom functions.
 // {...}
@@ -24,12 +24,13 @@ interface IRoute {
  */
 const routes = {
     home: { url: '/', label: 'Home', icon: HomeMajor } as IRoute,
+    browse: { url: '/browse', label: 'Browse', icon: SearchMajor } as IRoute,
 };
 
 /**
  * Variable that holds all routes that are supposed to be used
  * in main section of navigational bar.
  */
-export const mainRoutes = [routes.home];
+export const mainRoutes = [routes.home, routes.browse];
 
 export default routes;

@@ -15,7 +15,7 @@ import { mainRoutes } from '@constants/routes';
 export default function Navigation() {
     return (
         <PolarisNavigation location="/">
-            <PolarisNavigation.Section items={mainRoutes} />
+            <PolarisNavigation.Section title="Resume generator app" items={mainRoutes} />
         </PolarisNavigation>
     );
 }
