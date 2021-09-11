@@ -21,7 +21,6 @@ mix.webpackConfig({
         // @NOTE: These aliases must be synced with paths in "tsconfig.json" file.
         alias: {
             // @NOTE: Aliases for React.
-            '@js': path.resolve(__dirname, 'resources/ts'),
             '@actions': path.resolve(__dirname, 'resources/ts/actions'),
             '@components': path.resolve(__dirname, 'resources/ts/components'),
             '@constants': path.resolve(__dirname, 'resources/ts/constants'),
@@ -29,8 +28,9 @@ mix.webpackConfig({
             '@reducers': path.resolve(__dirname, 'resources/ts/reducers'),
             '@router': path.resolve(__dirname, 'resources/ts/router'),
             '@store': path.resolve(__dirname, 'resources/ts/store'),
-            '@theme': path.resolve(__dirname, 'theme'),
+            '@theme': path.resolve(__dirname, 'resources/ts/theme'),
             '@interfaces': path.resolve(__dirname, 'interfaces'),
+            '@js': path.resolve(__dirname, 'resources/ts'),
 
             // @NOTE: Misc aliases.
             '@styles': path.resolve(__dirname, 'resources/sass'),

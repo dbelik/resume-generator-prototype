@@ -30,7 +30,6 @@
         "baseUrl": "./" /* Specify the base directory to resolve non-relative module names. */,
         "paths": {
             /* Specify a set of entries that re-map imports to additional lookup locations. */
-            "@js/*": ["resources/ts/*"],
             "@actions/*": ["resources/ts/actions/*"],
             "@components/*": ["resources/ts/components/*"],
             "@constants/*": ["resources/ts/constants/*"],
@@ -40,6 +39,7 @@
             "@store/*": ["resources/ts/store/*"],
             "@theme/*": ["resources/ts/theme/*"],
             "@interfaces/*": ["resources/ts/interfaces/*"],
+            "@js/*": ["resources/ts/*"],
 
             "@styles/*": ["resources/sass/*"],
             "@public/*": ["public/*"]
