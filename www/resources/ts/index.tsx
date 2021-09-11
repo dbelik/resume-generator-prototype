@@ -2,7 +2,7 @@
 import ReactDOM from 'react-dom';
 
 // @NOTE: Import custom components.
-import App from '@frontend/components';
+import App from '@components/index';
 
 // @NOTE: Import misc.
 import 'bootstrap';

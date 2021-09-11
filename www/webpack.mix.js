@@ -20,7 +20,19 @@ mix.webpackConfig({
     resolve: {
         // @NOTE: These aliases must be synced with paths in "tsconfig.json" file.
         alias: {
-            '@frontend': path.resolve(__dirname, 'resources/js/frontend'),
+            // @NOTE: Aliases for React.
+            '@js': path.resolve(__dirname, 'resources/ts'),
+            '@actions': path.resolve(__dirname, 'resources/ts/actions'),
+            '@components': path.resolve(__dirname, 'resources/ts/components'),
+            '@constants': path.resolve(__dirname, 'resources/ts/constants'),
+            '@pages': path.resolve(__dirname, 'resources/ts/pages'),
+            '@reducers': path.resolve(__dirname, 'resources/ts/reducers'),
+            '@router': path.resolve(__dirname, 'resources/ts/router'),
+            '@store': path.resolve(__dirname, 'resources/ts/store'),
+            '@theme': path.resolve(__dirname, 'theme'),
+            '@interfaces': path.resolve(__dirname, 'interfaces'),
+
+            // @NOTE: Misc aliases.
             '@styles': path.resolve(__dirname, 'resources/sass'),
             '@public': path.resolve(__dirname, 'public'),
         },
@@ -31,7 +43,7 @@ mix.webpackConfig({
     },
 });
 
-mix.ts('resources/js/app.js', 'public/js')
+mix.ts('resources/ts/index.tsx', 'public/js')
     .eslint({
         enforce: 'pre',
         test: /\.(js|jsx|ts|tsx)$/,
