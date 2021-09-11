@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import App from '@components/layout/App';
 
 // @NOTE: Import misc.
+import '@shopify/polaris/dist/styles.css';
 import 'bootstrap';
 import '/css/app.css';
 
