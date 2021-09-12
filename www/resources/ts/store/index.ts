@@ -9,6 +9,7 @@ import axios from 'axios';
 
 // @NOTE: Import misc.
 import reducer from '@reducers/index';
+import { IResumesReducerState } from '@reducers/resumes';
 
 const client = axios.create({
     baseURL: '/api',
@@ -18,7 +19,7 @@ const client = axios.create({
 const store = createStore(reducer, applyMiddleware(thunk, axiosMiddleware(client)));
 
 export interface IRootStore {
-    resumes: any;
+    resumes: IResumesReducerState;
 }
 
 export default store;

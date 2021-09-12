@@ -36,7 +36,7 @@ type ResumesAction = IAction & {
  * IResumesReducerState - interface that represents resumes state.
  * It contains list of resumes.
  */
-interface IResumesReducerState extends IReducerInitialState {
+export interface IResumesReducerState extends IReducerInitialState {
     data: IResumesPaginated;
 }
 

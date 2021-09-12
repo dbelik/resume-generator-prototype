@@ -11,7 +11,8 @@
             "withStory": false,
             "withLazy": false,
             "customTemplates": {
-                "component": "resources/ts/templates/default/index.tsx"
+                "component": "resources/ts/templates/default/index.tsx",
+                "lazy": "resources/ts/templates/default/Variants.tsx"
             }
         },
         "page": {

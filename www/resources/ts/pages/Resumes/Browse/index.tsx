@@ -4,12 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Layout, MediaCard, Page, ResourceList } from '@shopify/polaris';
 
 // @NOTE: Import custom functions.
-import PreviewItem from '@components/Images/PreviewItem';
+import ResumePreviews from '@components/Paginations/ResumePreviews';
 
 // @NOTE: Import misc.
 import loadResumes from '@actions/resumes/list';
 import { IRootStore } from '@store/index';
-import IResume from '@interfaces/IResume';
 
 /**
  * ResumesBrowse - lists available resume templates.
@@ -25,26 +24,10 @@ export default function ResumesBrowse() {
         dispatch(loadResumes());
     }, []);
 
-    // @NOTE: Closures.
-    const renderResumes = useCallback(() => {
-        return resumes.data.data.map((resume: IResume, key: number) => {
-            return (
-                <Layout.Section oneThird key={key}>
-                    <PreviewItem
-                        title={resume.title}
-                        description={resume.description}
-                        img={resume.image}
-                        url={resume.url}
-                    />
-                </Layout.Section>
-            );
-        });
-    }, [resumes]);
-
     // @NOTE: Render component.
     return (
         <Page title="All templates" divider>
-            <Layout>{renderResumes()}</Layout>
+            <ResumePreviews resumes={resumes} />
         </Page>
     );
 }
