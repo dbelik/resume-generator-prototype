@@ -1,11 +1,13 @@
 // @NOTE: Import library functions.
 import { Banner, Button, Layout, Page } from '@shopify/polaris';
+import { useCallback } from 'react';
+import { useHistory } from 'react-router';
 
 // @NOTE: Import custom functions.
 // {...}
 
 // @NOTE: Import misc.
-// {...}
+import routes from '@constants/routes';
 
 /**
  * Home - Home page component. It gives general information about
@@ -14,6 +16,15 @@ import { Banner, Button, Layout, Page } from '@shopify/polaris';
  * @returns JSX.Element
  */
 export default function Home() {
+    // @NOTE: Misc hooks.
+    const history = useHistory();
+
+    // @NOTE: Closures.
+    const handleCreateResumeClick = useCallback(() => {
+        history.push(routes.resumesBrowse.url);
+    }, []);
+
+    // @NOTE: Render component.
     return (
         <Page title="Welcome">
             <Layout>
@@ -27,7 +38,9 @@ export default function Home() {
                         Use professional field-tested resume templates that follow the exact ‘resume rules’ employers
                         look for. Easy to use and done within minutes - try now for free!
                     </p>
-                    <Button primary>Create resume</Button>
+                    <Button onClick={handleCreateResumeClick} primary>
+                        Create resume
+                    </Button>
                 </Layout.Section>
             </Layout>
         </Page>
