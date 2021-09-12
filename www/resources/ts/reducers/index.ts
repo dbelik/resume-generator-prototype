@@ -2,13 +2,13 @@
 import { combineReducers } from 'redux';
 
 // @NOTE: Import custom functions.
-import mockReducer from '@reducers/mock/index';
+import resumes from '@reducers/resumes/index';
 
 // @NOTE: Import misc.
 // {...}
 
 const reducer = combineReducers({
-    mock: mockReducer,
+    resumes,
 });
 
 export default reducer;

@@ -16,7 +16,7 @@ class ResumesController extends Controller
      */
     public function index()
     {
-        return Resumes::select(['id', 'title', 'description'])->paginate();
+        return Resumes::select(['id', 'title', 'description', 'image'])->paginate();
     }
 
     /**

@@ -7,7 +7,9 @@
 // @NOTE: Import misc.
 // {...}
 
-export default interface IMock {
-    name: string;
-    count: number;
+export default interface IResume {
+    url: string;
+    image: string;
+    title: string;
+    description: string;
 }
