@@ -9,11 +9,11 @@ import { HomeMajor, SearchMajor, PlusMinor } from '@shopify/polaris-icons';
 // {...}
 
 /**
- * IRoute - Define a route in the application. It's being used
+ * IRouteItem - Define a route in the application. It's being used
  * in Router component to define available routes as well
  * as in navigational bar.
  */
-interface IRoute {
+export interface IRouteItem {
     url: string;
     label: string;
     icon: IconSource;
@@ -23,9 +23,9 @@ interface IRoute {
  * routes - Variable that holds all routes in the application.
  */
 const routes = {
-    home: { url: '/', label: 'Home', icon: HomeMajor } as IRoute,
-    resumesBrowse: { url: '/browse', label: 'Browse', icon: SearchMajor } as IRoute,
-    resumesCreate: { url: '/create', label: 'Create', icon: PlusMinor } as IRoute,
+    home: { url: '/', label: 'Home', icon: HomeMajor } as IRouteItem,
+    resumesBrowse: { url: '/browse', label: 'Browse', icon: SearchMajor } as IRouteItem,
+    resumesCreate: { url: '/create', label: 'Create', icon: PlusMinor } as IRouteItem,
 };
 
 /**

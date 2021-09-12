@@ -1,4 +1,5 @@
 // @NOTE: Import library functions.
+import { Fragment } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 // @NOTE: Import custom functions.
@@ -10,7 +11,7 @@ import UserResumes from '@pages/User/Resumes';
 
 import NotFound from '@pages/errors/NotFound';
 
-import TopBar from '@components/Layout/TopBar';
+import SiteLayout from '@components/Layout/SiteLayout/index';
 
 // @NOTE: Import misc.
 import routes from '@constants/routes';
@@ -26,19 +27,19 @@ import routes from '@constants/routes';
 export default function Router() {
     return (
         <BrowserRouter>
-            <TopBar />
+            <SiteLayout>
+                <Switch>
+                    {/* @NOTE: Public pages */}
+                    <Route path={routes.home.url} exact component={Home} />
+                    <Route path={routes.resumesBrowse.url} exact component={ResumesBrowse} />
+                    <Route path={routes.resumesCreate.url} exact component={ResumesCreate} />
 
-            <Switch>
-                {/* @NOTE: Public pages */}
-                <Route path={routes.home.url} exact component={Home} />
-                <Route path={routes.resumesBrowse.url} exact component={ResumesBrowse} />
-                <Route path={routes.resumesCreate.url} exact component={ResumesCreate} />
+                    {/* @NOTE: Private pages. */}
 
-                {/* @NOTE: Private pages. */}
-
-                {/* @NOTE: Error pages. */}
-                <Route component={NotFound} />
-            </Switch>
+                    {/* @NOTE: Error pages. */}
+                    <Route component={NotFound} />
+                </Switch>
+            </SiteLayout>
         </BrowserRouter>
     );
 }

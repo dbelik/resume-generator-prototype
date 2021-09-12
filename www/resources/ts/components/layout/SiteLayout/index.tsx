@@ -9,16 +9,23 @@ import Navigation from '@components/Layout/Navigation';
 // @NOTE: Import misc.
 // {...}
 
+export interface ISiteLayoutProps {
+    children?: JSX.Element;
+}
+
 /**
- * TopBar - Lays down navigational bar for the application. It
- * uses polaris' TopBar component.
+ * SiteLayout - Lays down navigational bar and contanet for the application. It
+ * uses polaris' Frame component.
  *
+ * @prop {JSX.Element} children - Frame's children, usually Router component.
  * @returns JSX.Element
  */
-export default function TopBar() {
+export default function SiteLayout({ children }: ISiteLayoutProps) {
+    // @NOTE: State hooks.
     const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    // @NOTE: Closures.
     /**
      * Handles navigation menu toggle.
      */
@@ -33,6 +40,7 @@ export default function TopBar() {
         setIsUserMenuOpen((isUserMenuOpen) => !isUserMenuOpen);
     }, []);
 
+    // @NOTE: Render component.
     return (
         <Frame
             topBar={
@@ -47,6 +55,8 @@ export default function TopBar() {
             navigation={<Navigation />}
             showMobileNavigation={isMenuOpen}
             onNavigationDismiss={handleNavigationToggle}
-        ></Frame>
+        >
+            {children}
+        </Frame>
     );
 }
