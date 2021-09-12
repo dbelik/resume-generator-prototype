@@ -15,7 +15,7 @@ import PreviewItem from '@components/Images/PreviewItem';
 export default function ResumesBrowse() {
     // @NOTE: Render component.
     return (
-        <Page title="All templates">
+        <Page title="All templates" divider>
             <Layout>
                 <Layout.Section oneThird>
                     <PreviewItem
