@@ -10,7 +10,7 @@ import routes from '@constants/routes';
 const dark: ThemeConfig = {
     colorScheme: 'dark',
     logo: {
-        width: 200,
+        width: 180,
         url: routes.home.url,
         accessibilityLabel: 'Resume generator',
         topBarSource: '/images/logo/dark.svg',

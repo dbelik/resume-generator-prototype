@@ -32,6 +32,6 @@ const routes = {
  * mainRoutes - Variable that holds all routes that are supposed to be used
  * in main section of navigational bar.
  */
-export const mainRoutes = [routes.home, routes.resumesBrowse, routes.resumesCreate];
+export const mainRoutes = [routes.home, routes.resumesBrowse];
 
 export default routes;
