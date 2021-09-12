@@ -4,6 +4,7 @@ include .env
 ## Command variables
 DOCKER_COMPOSE=docker-compose -f docker-compose.${ENVIRONMENT}.yml
 SH=sh
+BASH=bash
 
 ## Container variables
 NODE_CONTAINER=resume-prototype-node
@@ -12,7 +13,7 @@ PHP_FPM_CONTAINER=resume-prototype-php-fpm
 ## Argument variables
 user=${DEFAULT_USER_ID}
 group=${DEFAULT_GROUP_ID}
-command=bash
+command=${BASH}
 
 # Commands:
 ---------------: ## ------[ Docker essential commands ]---------
@@ -46,6 +47,8 @@ exec: ## Execute container.
 	$(DOCKER_COMPOSE) exec --user=${user}:${group} ${container} ${command}
 run-node: ## Run node container.
 	$(MAKE) run container=$(NODE_CONTAINER) command=$(SH)
+exec-php-fpm: ## Run node container.
+	$(MAKE) exec container=$(PHP_FPM_CONTAINER)
 	
 ---------------: ## ------[ Misc commands ]---------
 help: ## Print the list of all available commands with corresponding description.

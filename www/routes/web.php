@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\Frontend\IndexController;
-
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{path?}', [IndexController::class, 'index'])
-    ->where('path', '(.*)')->name('frontend-index');
+Route::view('/{path?}', 'frontend')->where('path', '(.*)')->name('frontend-index');
 
 Auth::routes();
