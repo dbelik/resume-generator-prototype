@@ -6,8 +6,8 @@ use App\Models\Resumes;
 
 use Barryvdh\DomPDF\PDF;
 
-use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ResumesController extends Controller
 {
@@ -40,14 +40,11 @@ class ResumesController extends Controller
      */
     public function store(Request $request)
     {
-        $this->pdf->loadView('resumes/test', [
-            "customer" => [
-                'id' => 1,
-                'name' => '123123',
-                'email' => '1231232@gmail.com',
-                'phone' => '123123'
-            ]
-        ]);
+        $args = [
+            'first_name' => "First name",
+            'second_name' => "Second name"
+        ];
+        $this->pdf->loadView("template", $args);
         return $this->pdf->stream();
     }
 
