@@ -6,7 +6,7 @@
 
 // @NOTE: Import misc.
 import IReducerInitialState from '@interfaces/IReducerInitialState';
-import IResume from '@interfaces/IResume';
+import Resume from '@js/types/Resume';
 import IAction from '@interfaces/IAction';
 import IPagination from '@interfaces/IPagination';
 
@@ -20,7 +20,7 @@ import {
  * IResumesPaginated - represents paginated list of resumes.
  */
 type IResumesPaginated = IPagination & {
-    data: IResume[];
+    data: Resume[];
 };
 
 /**

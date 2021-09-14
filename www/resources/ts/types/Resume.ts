@@ -7,9 +7,11 @@
 // @NOTE: Import misc.
 // {...}
 
-export default interface IResume {
+type Resume = {
     url: string;
     image: string;
     title: string;
     description: string;
-}
+};
+
+export default Resume;

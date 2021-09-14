@@ -30,6 +30,12 @@ mix.webpackConfig({
             '@store': path.resolve(__dirname, 'resources/ts/store'),
             '@theme': path.resolve(__dirname, 'resources/ts/theme'),
             '@interfaces': path.resolve(__dirname, 'interfaces'),
+
+            // @NOTE: You can't create custom alias named "@types", because
+            // Typescript will resolve it as some other package. Use "@js/types"
+            // instead to import from types folder.
+            // '@types': path.resolve(__dirname, 'types'),
+
             '@js': path.resolve(__dirname, 'resources/ts'),
 
             // @NOTE: Misc aliases.

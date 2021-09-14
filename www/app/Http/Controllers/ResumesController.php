@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Resumes\GenerateResumesRequest;
 use App\Models\Resumes;
-
-use Barryvdh\DomPDF\PDF;
+use App\Services\PDFService;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class ResumesController extends Controller
 {
@@ -16,9 +15,9 @@ class ResumesController extends Controller
      *
      * @return void
      */
-    public function __construct(PDF $pdf)
+    public function __construct(PDFService $pdfService)
     {
-        $this->pdf = $pdf;
+        $this->pdfService = $pdfService;
     }
 
     /**
@@ -38,14 +37,9 @@ class ResumesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GenerateResumesRequest $request)
     {
-        $args = [
-            'first_name' => "First name",
-            'second_name' => "Second name"
-        ];
-        $this->pdf->loadView("template", $args);
-        return $this->pdf->stream();
+        return $this->pdfService->generate("template-$request->id", $request->all());
     }
 
     /**

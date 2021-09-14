@@ -8,7 +8,7 @@ import ResumePreviewsVariants from './Variants';
 
 // @NOTE: Import misc.
 import { IResumesReducerState } from '@reducers/resumes';
-import IResume from '@interfaces/IResume';
+import Resume from '@js/types/Resume';
 
 export interface IResumePreviewsProps {
     resumes: IResumesReducerState;
@@ -22,7 +22,7 @@ export interface IResumePreviewsProps {
 export default function ResumePreviews({ resumes }: IResumePreviewsProps) {
     // @NOTE: Closures.
     const renderResumes = useCallback(() => {
-        return resumes.data.data.map((resume: IResume, key: number) => {
+        return resumes.data.data.map((resume: Resume, key: number) => {
             return (
                 <Layout.Section oneThird key={key}>
                     <PreviewItem
