@@ -2,13 +2,13 @@
 
 1. [Introduction](#introduction)
 2. [Commands](#commands)
-   1. Npm
-   2. Makefile
+   1. [Npm](#npm)
+   2. [Makefile](#makefile)
 3. [Naming conventions](#naming-conventions)
-   1. Migrations
+   1. [Migrations](#migrations)
 4. [Features](#features)
 5. [References](#references)
-   1. Projects
+   1. [Projects](#projects)
 
 ## Introduction
 
