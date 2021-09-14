@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Resumes\GenerateResumesRequest;
 use App\Models\Resumes;
 use App\Services\PDFService;
 
@@ -37,7 +36,7 @@ class ResumesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(GenerateResumesRequest $request)
+    public function store(Request $request)
     {
         return $this->pdfService->generate("template-$request->id", $request->all());
     }

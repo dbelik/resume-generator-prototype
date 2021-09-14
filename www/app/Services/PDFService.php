@@ -2,8 +2,11 @@
 
 namespace App\Services;
 
+use App\Exceptions\Http\InvalidDataException;
 use App\Exceptions\Http\NotFoundException;
+
 use Barryvdh\DomPDF\PDF;
+use Facade\Ignition\Exceptions\ViewException;
 use InvalidArgumentException;
 
 class PDFService
@@ -33,6 +36,8 @@ class PDFService
             return $this->pdf->stream();
         } catch (InvalidArgumentException $e) {
             throw new NotFoundException("PDF template wasn't found");
+        } catch (ViewException $e) {
+            throw new InvalidDataException("You have passed invalid data. Make sure you've filled all necessary fields.");
         }
     }
 }
