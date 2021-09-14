@@ -8,8 +8,9 @@ only necessary functionality, such as PDF resume generation.
 Make sure you complete all the following steps to before trying to use it:
 
 - Clone repository with command `git clone https://github.com/dbelik/resume-generator-prototype.git resume-generator-prototype`;
-- Copy enviroment file with command `cp .env.example .env`;
-- Fill all blank variables in `.env` file;
+- Copy Docker environment file with command `cp .env.example .env`;
+- Copy Laravel environment file with command `cp www/.env.example www/.env`;
+- Fill all blank variables in both environment files;
 - Run all containers and install all dependencies with `make up`.
 
 ## Documentation
