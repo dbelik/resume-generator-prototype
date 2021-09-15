@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ResumesController;
+use App\Http\Controllers\ResumesGenerateController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -17,5 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(["prefix" => "/resumes"], function () {
     Route::get("/", [ResumesController::class, "index"]);
-    Route::post("/{id}", [ResumesController::class, "store"]);
+    Route::post("/", [ResumesController::class, "store"]);
+
+    Route::post("/generate/{id}", [ResumesGenerateController::class, "store"]);
 });

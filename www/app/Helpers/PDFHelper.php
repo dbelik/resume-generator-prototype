@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace App\Helpers;
 
 use App\Exceptions\Http\InvalidDataException;
 use App\Exceptions\Http\NotFoundException;
@@ -9,7 +9,7 @@ use Barryvdh\DomPDF\PDF;
 use Facade\Ignition\Exceptions\ViewException;
 use InvalidArgumentException;
 
-class PDFService
+class PDFHelper
 {
     /**
      * Create a new controller instance.
@@ -37,7 +37,9 @@ class PDFService
         } catch (InvalidArgumentException $e) {
             throw new NotFoundException("PDF template wasn't found");
         } catch (ViewException $e) {
-            throw new InvalidDataException("You have passed invalid data. Make sure you've filled all necessary fields.");
+            // @NOTE: ViewException indicates that arguments that were passed are incorrect. It could be
+            // invalid types (expected string, got array) or missing fields.
+            throw new InvalidDataException("You have passed invalid data. Make sure you've filled all necessary fields correctly.");
         }
     }
 }

@@ -56,3 +56,6 @@ help: ## Print the list of all available commands with corresponding description
 
 ## Commands that must always run (prevents from getting 'command is up to date' error).
 .PHONY: docs
+
+## Display "help" command when running "make" command with no arguments
+.DEFAULT_GOAL = help

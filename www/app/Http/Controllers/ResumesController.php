@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Resumes;
-use App\Services\PDFService;
+use App\Helpers\PDFHelper;
+use App\Helpers\TemplateHelper;
+use App\Http\Requests\Resumes\ResumesStoreRequest;
+use App\Http\Responses\CreatedResponse;
+use App\Repositories\ResumesRepository;
 
 use Illuminate\Http\Request;
 
@@ -14,9 +18,11 @@ class ResumesController extends Controller
      *
      * @return void
      */
-    public function __construct(PDFService $pdfService)
+    public function __construct(PDFHelper $pdfHelper, TemplateHelper $templateHelper, ResumesRepository $resumesRepositoty)
     {
-        $this->pdfService = $pdfService;
+        $this->pdfHelper = $pdfHelper;
+        $this->templateHelper = $templateHelper;
+        $this->resumesRepositoty =  $resumesRepositoty;
     }
 
     /**
@@ -36,9 +42,12 @@ class ResumesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ResumesStoreRequest $request)
     {
-        return $this->pdfService->generate("template-$request->id", $request->all());
+        $this->resumesRepositoty->store(array_merge($request->all(), [
+            "template_path" => $this->templateHelper->storeTemplate($request->template)
+        ]));
+        return new CreatedResponse();
     }
 
     /**
